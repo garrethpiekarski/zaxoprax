@@ -6,7 +6,7 @@ var uglify = require('gulp-uglify');
 
 gulp.task('styles', function() {
     gulp.src('scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
         .pipe(gulp.dest('./dist/css/'));
 });
 
